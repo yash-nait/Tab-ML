@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="row home-row">
+    <div class="col-lg-6">
+      <div class="card text-center">
+        <img src="{{ url_for('static',filename='images/img1.jpg') }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Regression Task</h5>
+          <p class="card-text">Upload your Train and Test data and get Predictions</p>
+          <a href="/regression" class="btn btn-primary">Regression</a>
+        </div>
+        <div class="card-footer bg-transparent border-primary">What are Regression task?</div>
+      </div>
+    </div>
+    <div class="col-lg-6">
+      <div class="card text-center">
+        <img src="{{ url_for('static',filename='images/img2.jpg') }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Classification Task</h5>
+          <p class="card-text">Upload your Train and Test data and get Predictions.</p>
+          <a href="/classification" class="btn btn-primary">Classification</a>
+        </div>
+        <div class="card-footer bg-transparent border-primary">What are Classification task?</div>
+      </div>
+    </div>
+</div>
+
+{% endblock %}
