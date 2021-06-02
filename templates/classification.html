@@ -1,4 +1,56 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>Classification</h1>
+<div style="text-align: center; padding-top: 2.5%;">
+    <h1>Classification</h1>
+</div>
+
+<form method="POST" enctype="multipart/form-data">
+    <div class="card reg-card">
+        <h5 class="card-header">Train data</h5>
+        <div class="card-body">
+            <h5 class="card-title">Upload training data</h5>
+            <p class="card-text">This data will be processed, and will be used to train various classification models.</p>
+            <p class="card-text" style="color: red; font-style: italic;">Instruction: Make sure the value to be predicted is named target.</p>
+            <p style="color: red; font-style: italic;">.csv file only</p>
+            <div class="input-group">
+                <input class="form-control" type="file" name="train">
+            </div>
+        </div>
+    </div>
+
+    <div class="card reg-card">
+        <h5 class="card-header">Test data</h5>
+        <div class="card-body">
+            <h5 class="card-title">Upload test data</h5>
+            <p class="card-text">This data will be used to make prediction which you can download.</p>
+            <p style="color: red; font-style: italic;">.csv file only</p>
+            <div class="input-group">
+                <input class="form-control" type="file" name="test">
+            </div>
+        </div>
+    </div>
+
+    <div style="text-align: center;">
+        <input class="btn btn-lg btn-primary" onclick="myFunction()" type="submit" value="Train/Predict">
+    </div>
+</form>
+
+<div class="training">
+    <div class="wait-text">
+        <h1 class="a">Processing Data...</h1>
+        <h1 class="b">Training...</h1>
+        <h1 class="c">Making Prediction...</h1>
+    </div>
+    <div class="spinner-border" style="width: 3rem; height: 3rem;">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+    <h1>Please Wait</h1>
+</div>
+
+<script>
+    function myFunction() {
+        document.getElementsByClassName("wait-text")[0].setAttribute("class", "wait-ani")
+        document.getElementsByClassName("training")[0].setAttribute("style", "visibility: visible;")
+    }
+</script>
 {% endblock %}

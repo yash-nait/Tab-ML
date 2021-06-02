@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div style="text-align: center;">
+    <div class="card text-white bg-primary pred-card">
+        <div class="card-header">
+            <h1>Predictions</h1>
+        </div>
+        <div class="card-body">
+            <a href="../static/prediction/{{file_name}}" download><button class="btn btn-dark">download</button></a>
+        </div>
+      </div>
+      <div class="card text-white bg-primary pred-card">
+        <div class="card-header">
+            <h1>{{metrics}}:</h1>
+        </div>
+        <div class="card-body">
+            <h1>{{score}}</h1>
+        </div>
+      </div>
+    </div>
+    
+</div>
+{% endblock %}

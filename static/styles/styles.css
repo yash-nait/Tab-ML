@@ -35,3 +35,7 @@
     50%{opacity: 50%}
     100%{opacity: 100%;}
 }
+
+.pred-card{
+    margin: 5% 10%;
+}

@@ -1,5 +1,19 @@
 {% extends 'base.html' %}
 {% block content %}
-<h1>ERROR</h1>
-<h1>{{err}}</h1>
+<div style="text-align: center; margin: 5%;">
+    <h1 style="color: red;">ERROR</h1>
+    <h1>{{err}}</h1>
+</div>
+<div class="card text-white bg-primary" style="margin: 5%;">
+    <div class="card-header">
+        <h1>Make Sure:</h1>
+    </div>
+    <div class="card-body">
+        <ul>
+            <li>CLass/value to pe predicted is named target</li>
+            <li>File type is .csv</li>
+        </ul>
+    </div>
+  </div>
+
 {% endblock %}
