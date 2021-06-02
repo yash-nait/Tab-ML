@@ -57,7 +57,6 @@ def cls_predict(train_file, test_file, UPLOAD_FOLDER):
         X_test = full_pipeline.fit_transform(pd.read_csv(UPLOAD_FOLDER+"//"+test_file))
 
         pred = rand_tree_cls.predict(X_test)
-        print(UPLOAD_FOLDER+"//prediction//prediction.csv")
         pd.DataFrame(pred).to_csv(UPLOAD_FOLDER+"//prediction//prediction.csv", header=['prediction'], index=False)
         return (True, "", acc)
     except Exception as e:
